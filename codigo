@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Teste do Mercado</title>
+<script language="javascript" type="text/javascript">
+function validar() {
+var codigo = form1.codigo.value;
+var tipo = form1.tipo.value;
+var nome = form1.nome.value;
+var quantidade = form1.quantidade.value;
+var preco = form1.preco.value;
+var radiot = form1.radiot.value;
+
+if (codigo == "") {
+alert('Preencha o campo com o código da mercadoria');
+form1.codigo.focus();
+return false;
+}
+if (tipo == "") {
+alert('Preencha o campo com o tipo da mercadoria');
+form1.tipo.focus();
+return false;
+}
+if (nome == "") {
+alert('Preencha o campo com o nome da mercadoria');
+form1.nome.focus();
+return false;
+}
+if (quantidade == "") {
+alert('Preencha o campo com a quantidade');
+form1.quantidade.focus();
+return false;
+}
+if (preco == "") {
+alert('Preencha o campo com o preço');
+form1.nome.focus();
+return false;
+}
+if (radiot == "") {
+alert('Marque uma das opções');
+form1.radiot.focus();
+return false;
+}
+}
+</script>
+</head>
+<body>
+<form name="form1" action="enviar.php" method="post">
+Código da Mercadoria:
+<input name="codigo" type="number"><br /><br />
+Tipo da Mercadoria:
+<input name="tipo" type="text"><br /><br />
+Nome da Mercadoria:
+<input name="nome" type="text"><br /><br />
+Quantidade:
+<input name="quantidade" type="number"><br /><br />
+Preço:
+<input name="preco" type="number"><br /><br />
+Compra ou Venda?
+<input type="radio" name="radiot" value="male" checked> Compra<br>
+  <input type="radio" name="radiot" value="female"> Venda<br>
+<input type="submit"  onclick="return validar()">
+</form>
+</body>
+</html>
